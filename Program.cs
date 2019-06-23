@@ -27,6 +27,9 @@ namespace ConsoleCore
             obj.FirstName = "Mr. Bibekananda";
             obj.LastName = "Panigrahi";
             Console.WriteLine($"first Name {obj.FirstName} and last Name {obj.LastName}");
+            Func<DateTime, string> getTomorrow = today => today.AddDays(2).ToShortDateString();
+            obj.getTomorrowDate = getTomorrow;
+            Console.WriteLine(obj.getTomorrowDate(DateTime.Now));
             Console.Read();
         }
 
